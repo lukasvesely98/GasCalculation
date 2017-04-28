@@ -2,6 +2,7 @@
 \.idea/
 
 src/node_modules/
+node_modules/
 
 src/\.sass-cache/e4f4972a724f1efdcee570675ef4a63088882bf2/
 
