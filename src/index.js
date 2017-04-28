@@ -6,16 +6,9 @@ var totalDistance = document.getElementById("totalDistance");
 var button = document.getElementById("button");
 var checkbox = document.getElementById("checkbox");
 
+  button.onclick = showResult;
+};
 
-
-  button.onclick = calculate;
-}
-/*
-parseInt(numberOfPassengers.value)
-parseInt(priceOfGas.value)
-parseInt(averageConsumption.value)
-parseInt(totalDistance.value)
-*/
 
 function calculate() {
     var rValue = (((parseInt(totalDistance.value)/100)*parseInt(averageConsumption.value)*parseInt(priceOfGas.value))/parseInt(numberOfPassengers.value) );
@@ -24,15 +17,34 @@ function calculate() {
           rValue = rValue * 2;
         }
 
-  var t = document.createTextNode("Everybody will pay " + rValue);
-  var para = document.createElement("P");
+        return rValue;
 
-  para.appendChild(t);
-  document.getElementById("div").appendChild(para);
+}
+function checkResult(result){
+  if (document.getElementById("par")) {
+    document.getElementById("par").textContent = result;
+  }
+  else {
+    var t = document.createTextNode(result);
+    var para = document.createElement("P");
 
+    para.setAttribute("id", "par");
+    para.appendChild(t);
+    document.getElementById("div").setAttribute("class","jumbotron");
+    document.getElementById("div").appendChild(para);
+  }
 }
 
 
+function  showResult() {
+
+  if(isNaN(calculate())) {
+    checkResult("Your input isn't number", calculate())
+  }
+  else {
+    checkResult("Everybody will pay "+calculate())
+  }
 
 
+}
 
