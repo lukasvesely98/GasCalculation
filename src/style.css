@@ -1,6 +1,9 @@
-* {margin: 1em; text-align: center}
+* {
+  margin: 1em;
+  text-align: center; }
 
-.jumbotron {font-size: 0.3em}
+.jumbotron {
+  font-size: 0.3em;
+  background-color: red; }
 
-
-
+/*# sourceMappingURL=style.css.map */
