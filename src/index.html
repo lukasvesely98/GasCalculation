@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gas Calculator</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+
+    <div class ="container">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+
+                <div class="jumbotron">
+                <h1>Gas Calculator</h1>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfPassengers">Number of passengers</label>
+                    <input type="text" class="form-control" id="numberOfPassengers">
+                </div>
+
+                <div class="form-group">
+                    <label for="priceOfGas">Price of gas (per 1 liter)</label>
+                    <input type="text" class="form-control" id="priceOfGas">
+                </div>
+
+                <div class="form-group">
+                    <label for="averageConsumption">Average car gas consumption (per 100 Km)</label>
+                    <input type="text" class="form-control" id="averageConsumption">
+                </div>
+
+                <div class="form-group">
+                    <label for="totalDistance">Total distance</label>
+                    <input type="text" class="form-control" id="totalDistance">
+                </div>
+
+         <br>
+
+                <div class="checkbox">
+                    <label><input type="checkbox" value="" id="checkbox"> + Way Back</label>
+                </div>
+
+          <br>
+
+         <button type="submit" id="button" class="btn btn-primary btn-lg">Calculate</button>
+
+                <div class="jumbotron">
+                <p id="result"> </p>
+                </div>
+
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+    </div>
+</body>
+</html>
