@@ -5,11 +5,11 @@
 ## Initialize Project
 
     git clone git@github.com:lukasvesely98/GasCalculation.git
-    cd GasCalculation-master\src
+    cd GasCalculation\src
 
 ## Run Project
 
-    cd GasCalculation-master\src    
+    cd GasCalculation\src    
 
 open  `index.html`
 
