@@ -4,7 +4,7 @@
   "description": "> application for gas bill splitting",
   "main": "index.js",
   "scripts": {
-    "build-sass": "node-sass src/style.scss style.css",
+    "build-sass": "node-sass src/style.scss src/style.css",
     "start-server":"cd src && http-server -o",
     "start": "npm run build-sass && npm run start-server"
   },
