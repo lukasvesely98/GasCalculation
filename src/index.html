@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Gas Calculator</title>
     <link type="text/css" href="style.css" rel="stylesheet">
     <script type="text/javascript" src="index.js"></script>
+
 </head>
 <body>
 
     <div class ="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-
                 <div class="jumbotron">
-                <h1>Gas Calculator</h1>
+                    <h1>Gas Calculator</h1>
                 </div>
+                <form data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <label for="numberOfPassengers">Number of passengers</label>
+                                <input type="number" class="form-control" id="numberOfPassengers">
+                                <div class="help-block" id="passengers" ></div>
+                            </div>
 
-                <div class="form-group">
-                    <label for="numberOfPassengers">Number of passengers</label>
-                    <input type="text" class="form-control" id="numberOfPassengers">
-                </div>
+                            <div class="form-group">
+                                <label for="priceOfGas">Price of gas (per 1 liter)</label>
+                                <input type="number" class="form-control" id="priceOfGas">
+                                <div class="help-block" id="gas"></div>
+                            </div>
 
-                <div class="form-group">
-                    <label for="priceOfGas">Price of gas (per 1 liter)</label>
-                    <input type="text" class="form-control" id="priceOfGas">
-                </div>
+                            <div class="form-group">
+                                <label for="averageConsumption">Average car gas consumption (per 100 Km)</label>
+                                <input type="number" class="form-control" id="averageConsumption">
+                                <div class="help-block" id="consumption"></div>
+                            </div>
 
-                <div class="form-group">
-                    <label for="averageConsumption">Average car gas consumption (per 100 Km)</label>
-                    <input type="text" class="form-control" id="averageConsumption">
-                </div>
-
-                <div class="form-group">
-                    <label for="totalDistance">Total distance</label>
-                    <input type="text" class="form-control" id="totalDistance">
-                </div>
-
+                            <div class="form-group">
+                                <label for="totalDistance">Total distance (km)</label>
+                                <input type="number" class="form-control" id="totalDistance">
+                                <div class="help-block with-errors" id="distance"></div>
+                            </div>
          <br>
-
                 <div class="checkbox">
                     <label><input type="checkbox" value="" id="checkbox"> + Way Back</label>
                 </div>
-
           <br>
-
-         <button type="submit" id="button" class="btn btn-primary btn-lg">Calculate</button>
-
-                <div id="div" >
+                <div class="form-group">
+         <button type="button" id="button" class="btn btn-primary btn-lg">Calculate</button>
                 </div>
 
+                </form>
+                <div id="div" >
+                </div>
             </div>
             <div class="col-xs-3"></div>
         </div>

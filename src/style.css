@@ -5821,3 +5821,6 @@ button.close {
 .jumbotron {
   font-size: 0.3em;
   background-color: orange; }
+
+.help-block {
+  color: red; }
