@@ -4,7 +4,9 @@
   "description": "> application for gas bill splitting",
   "main": "index.js",
   "scripts": {
-    "start": "node-sass -w src/style.scss style.css"
+    "build-sass": "node-sass src/style.scss style.css",
+    "start-server":"cd src && http-server -o",
+    "start": "npm run build-sass && npm run start-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/lukasvesely98/GasCalculation#readme",
   "devDependencies": {
     "node-sass": "^4.5.2"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
   }
 }
