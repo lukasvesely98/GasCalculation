@@ -6,6 +6,7 @@ var totalDistance = document.getElementById("totalDistance");
 var button = document.getElementById("button");
 var checkbox = document.getElementById("checkbox");
 
+
   button.onclick = showResult;
 };
 
@@ -23,6 +24,7 @@ function calculate() {
 function checkResult(result){
   if (document.getElementById("par")) {
     document.getElementById("par").textContent = result;
+
   }
   else {
     var t = document.createTextNode(result);
@@ -35,15 +37,33 @@ function checkResult(result){
   }
 }
 
+function validation (idValue, idHelp) {
+  if(isNaN(parseInt(document.getElementById(idValue).value)))
+  {
+  document.getElementById(idHelp).innerText="please insert just numbers";
+  }
+  else
+  {
+    document.getElementById(idHelp).innerText="";
+  }
+}
+
 
 function  showResult() {
 
-  if(isNaN(calculate())) {
-    checkResult("Your input isn't number", calculate())
+  validation("numberOfPassengers","passengers");
+  validation("priceOfGas","gas");
+  validation("averageConsumption","consumption");
+  validation("totalDistance","distance");
+
+  if(!isNaN(calculate())) {
+    checkResult("Everybody will pay "+calculate());
   }
   else {
-    checkResult("Everybody will pay "+calculate())
+    document.getElementById("div").removeAttribute("class","jumbotron");
+    document.getElementById("div").removeChild(document.getElementById("par"));
   }
+
 
 
 }
