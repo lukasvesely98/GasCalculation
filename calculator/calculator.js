@@ -1,18 +1,16 @@
+var rl = require('readline')
 
-var pasengers = 50;
+var passengers = 50
+var cost = 35
 
-var cost = 35;
+console.log(passengers * cost)
 
-console.log( pasengers * cost)
+var i = rl.createInterface(process.stdin, process.stdout, null)
+i.question('What do you think of node.js?\n', function (answer) {
 
-var rl = require('readline');
+  console.log('Your answer is: ', answer)
+  console.log('Thank you for your valuable feedback.')
 
-var i = rl.createInterface(process.stdin, process.stdout, null);
-i.question("What do you think of node.js?", function(answer) {
-
-  console.log("Thank you for your valuable feedback.");
-
-  
-  i.close();
-  process.stdin.destroy();
-});
+  i.close()
+  process.stdin.destroy()
+})
