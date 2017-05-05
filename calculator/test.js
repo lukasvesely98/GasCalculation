@@ -3,8 +3,8 @@
  */
 var request = require('request');
 
-var username = 'lukasvesely98',
-  password = 'ROjnsnsapvnj4l';
+var username = 'lukasvesely98';
+var password = 'ROjnsnsapvnj4l';
 
 var options = {
   url: 'https://api.github.com/repos/pavelbinar/ro_convert-github-issues-to-csv/issues?per_page=100&state=all&page=1',
@@ -13,11 +13,11 @@ var options = {
   },
   auth: {
     'user': username,
-    'pass': password,
+    'pass': password
   }
 };
 
-request(options).on('response', function(response) {
+request.get(options).on('response', function(response) {
   console.log(response.statusCode) // 200
-  console.log(response.headers['content-type']) // 'image/png'
+  console.log(response.headers['content-type'])
 });
