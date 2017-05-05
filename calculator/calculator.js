@@ -1,16 +1,13 @@
-var rl = require('readline')
+var prompt = require('prompt');
 
-var passengers = 50
-var cost = 35
+prompt.start();
 
-console.log(passengers * cost)
+prompt.get(['numberOfPassengers', 'priceOfGas','averageConsumption','totalDistance'], function (err, result) {
 
-var i = rl.createInterface(process.stdin, process.stdout, null)
-i.question('What do you think of node.js?\n', function (answer) {
+  console.log('Everybody will pay ' + calculate(result.numberOfPassengers,result.priceOfGas,result.averageConsumption,result.totalDistance));
 
-  console.log('Your answer is: ', answer)
-  console.log('Thank you for your valuable feedback.')
+});
 
-  i.close()
-  process.stdin.destroy()
-})
+function calculate (numberOfPassengers,priceOfGas,averageConsumption,totalDistance) {
+  return (((parseInt(totalDistance)/100)*parseInt(averageConsumption)*parseInt(priceOfGas))/parseInt(numberOfPassengers))
+}
