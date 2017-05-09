@@ -1,6 +1,7 @@
 /**
  * Created by developer on 5.5.17.
  */
+var fs = require('fs');
 var request = require('request');
 
 var username = 'lukasvesely98';
@@ -20,4 +21,4 @@ var options = {
 request.get(options).on('response', function(response) {
   console.log(response.statusCode) // 200
   console.log(response.headers['content-type'])
-});
+}).pipe(fs.createWriteStream('all_issues_p1.json'));
